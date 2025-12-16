@@ -1,0 +1,13 @@
+flask
+flask-cors
+supabase
+openai
+pandas
+openpyxl
+xlrd
+reportlab
+pypdf
+python-dotenv
+requests
+matplotlib
+numpy
