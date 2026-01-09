@@ -15,6 +15,8 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 import pandas as pd
+from app.text_sanitize import limpar_para_pdf
+
 
 # Carregar variáveis de ambiente (.env)
 load_dotenv()
@@ -328,8 +330,7 @@ ESTATÍSTICAS:
             max_tokens=int(os.getenv("MAX_TOKENS", "4000"))
         )
         
-        resultado = resposta.choices[0].message.content
-        
+        resultado = resposta.choices[0].message.content 
         print(f"✅ Análise concluída: {len(resultado)} caracteres")
         
         return resultado
